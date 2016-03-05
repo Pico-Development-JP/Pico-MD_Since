@@ -6,11 +6,11 @@
  * @author TakamiChie
  * @link http://onpu-tamago.net/
  * @license http://opensource.org/licenses/MIT
- * @version 1.0
+ * @version 1.1
  */
-class Pico_MD_Since {
+class Pico_MD_Since extends AbstractPicoPlugin {
 
-	public function before_parse_content(&$content)
+	public function onContentParsed(&$content)
 	{
     $now = new DateTime();
   	$content = preg_replace_callback('/#since\(([\d\/\-]+)\)/', function($m) use ($now){
