@@ -10,6 +10,8 @@
  */
 class Pico_MD_Since extends AbstractPicoPlugin {
 
+  protected $enabled = false;
+
 	public function onContentParsed(&$content)
 	{
     $now = new DateTime();
